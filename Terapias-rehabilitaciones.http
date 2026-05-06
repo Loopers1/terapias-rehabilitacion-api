@@ -1,0 +1,6 @@
+@Terapias_rehabilitaciones_HostAddress = http://localhost:5094
+
+GET {{Terapias_rehabilitaciones_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
