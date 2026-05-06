@@ -37,6 +37,7 @@ app.UseCors("PermitirTodo");
 
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseCors("AllowAll");
 app.MapControllers();
