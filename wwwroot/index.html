@@ -447,22 +447,22 @@
     <!-- HEADER -->
     <div class="header">
         <div>
-            <h1>🏥 Sistema de Terapias y Rehabilitación</h1>
-            <p>Hospital de Tercer Nivel — Módulo 11 del ERP Hospitalario</p>
+            <h1> Sistema de Terapias y Rehabilitación</h1>
+            
         </div>
         <div style="font-size:13px;opacity:0.8">📅 <span id="fecha-actual"></span></div>
     </div>
 
     <!-- NAVEGACIÓN -->
     <div class="nav">
-        <button class="active" onclick="ir('dashboard',this)">📊 Dashboard</button>
-        <button onclick="ir('pacientes',this)">👤 Pacientes</button>
-        <button onclick="ir('terapeutas',this)">👨‍⚕️ Terapeutas</button>
-        <button onclick="ir('terapias',this)">💊 Tipos de Terapia</button>
-        <button onclick="ir('sesiones',this)">📋 Sesiones</button>
-        <button onclick="ir('planes',this)">📝 Planes de Tratamiento</button>
-        <button onclick="ir('reportes',this)">📈 Reportes MIS</button>
-        <button onclick="ir('integracion',this)">🔗 Integración</button>
+        <button class="active" onclick="ir('dashboard',this)"> Dashboard</button>
+        <button onclick="ir('pacientes',this)"> Pacientes</button>
+        <button onclick="ir('terapeutas',this)"> Terapeutas</button>
+        <button onclick="ir('terapias',this)"> Tipos de Terapia</button>
+        <button onclick="ir('sesiones',this)"> Sesiones</button>
+        <button onclick="ir('planes',this)"> Planes de Tratamiento</button>
+        <button onclick="ir('reportes',this)"> Reportes MIS</button>
+        <button onclick="ir('integracion',this)"> Integración</button>
     </div>
 
     <div class="content">
@@ -489,16 +489,16 @@
             </div>
             <div class="dos-col-igual">
                 <div class="card">
-                    <h2>📊 Sesiones por Tipo de Terapia</h2>
+                    <h2> Sesiones por Tipo de Terapia</h2>
                     <div id="d-tipo"><div class="loading">Cargando...</div></div>
                 </div>
                 <div class="card">
-                    <h2>👥 Sesiones por Terapeuta</h2>
+                    <h2> Sesiones por Terapeuta</h2>
                     <div id="d-ter"><div class="loading">Cargando...</div></div>
                 </div>
             </div>
             <div class="card">
-                <h2>💰 Costo Total por Paciente</h2>
+                <h2> Costo Total por Paciente</h2>
                 <div id="d-costo"><div class="loading">Cargando...</div></div>
             </div>
         </div>
@@ -514,7 +514,7 @@
                     <div class="form-group"><label>Apellido *</label><input type="text" id="n-pac-ape" placeholder="Pérez"></div>
                     <div class="form-group"><label>CI *</label><input type="text" id="n-pac-ci" placeholder="1234567"></div>
                     <div class="form-group"><label>Teléfono</label><input type="text" id="n-pac-tel" placeholder="70000000"></div>
-                    <button class="btn btn-success btn-full" onclick="crearPaciente()">✅ Registrar Paciente</button>
+                    <button class="btn btn-success btn-full" onclick="crearPaciente()"> Registrar Paciente</button>
                 </div>
                 <div class="card">
                     <h2>👤 Lista de Pacientes</h2>
@@ -532,7 +532,7 @@
                     <div class="form-group"><label>Código *</label><input type="text" id="n-ter-cod" placeholder="TER-003"></div>
                     <div class="form-group"><label>Nombre *</label><input type="text" id="n-ter-nom" placeholder="Luis"></div>
                     <div class="form-group"><label>Apellido *</label><input type="text" id="n-ter-ape" placeholder="Mamani"></div>
-                    <button class="btn btn-success btn-full" onclick="crearTerapeuta()">✅ Registrar Terapeuta</button>
+                    <button class="btn btn-success btn-full" onclick="crearTerapeuta()"> Registrar Terapeuta</button>
                 </div>
                 <div class="card">
                     <h2>👨‍⚕️ Lista de Terapeutas</h2>
@@ -551,7 +551,7 @@
                     <div class="form-group"><label>Nombre *</label><input type="text" id="n-tt-nom" placeholder="Hidroterapia"></div>
                     <div class="form-group"><label>Descripción</label><textarea id="n-tt-des" rows="3" placeholder="Descripción del tratamiento"></textarea></div>
                     <div class="form-group"><label>Costo (Bs.) *</label><input type="number" id="n-tt-cos" placeholder="180"></div>
-                    <button class="btn btn-success btn-full" onclick="crearTerapia()">✅ Registrar Tipo de Terapia</button>
+                    <button class="btn btn-success btn-full" onclick="crearTerapia()"> Registrar Tipo de Terapia</button>
                 </div>
                 <div class="card">
                     <h2>💊 Lista de Tipos de Terapia</h2>
@@ -582,7 +582,7 @@
                     <div class="form-group"><label>Fecha y Hora *</label><input type="datetime-local" id="n-ses-fec"></div>
                     <div class="form-group"><label>Duración (min) *</label><input type="number" id="n-ses-dur" placeholder="45"></div>
                     <div class="form-group"><label>Observaciones</label><textarea id="n-ses-obs" rows="3" placeholder="Observaciones clínicas"></textarea></div>
-                    <button class="btn btn-success btn-full" onclick="crearSesion()">✅ Registrar Sesión</button>
+                    <button class="btn btn-success btn-full" onclick="crearSesion()"> Registrar Sesión</button>
                 </div>
                 <div class="card">
                     <h2>📋 Lista de Sesiones</h2>
@@ -605,7 +605,7 @@
                     <div class="form-group"><label>Objetivo *</label><textarea id="n-plan-obj" rows="3" placeholder="Objetivo del tratamiento"></textarea></div>
                     <div class="form-group"><label>Fecha Inicio *</label><input type="date" id="n-plan-ini"></div>
                     <div class="form-group"><label>Fecha Fin Estimada *</label><input type="date" id="n-plan-fin"></div>
-                    <button class="btn btn-success btn-full" onclick="crearPlan()">✅ Registrar Plan</button>
+                    <button class="btn btn-success btn-full" onclick="crearPlan()"> Registrar Plan</button>
                 </div>
                 <div class="card">
                     <h2>📝 Planes de Tratamiento</h2>
@@ -618,31 +618,31 @@
         <div id="reportes" class="section">
             <div class="dos-col-igual">
                 <div class="card">
-                    <h2>📊 Sesiones por Tipo de Terapia</h2>
+                    <h2> Sesiones por Tipo de Terapia</h2>
                     <div id="r-tipo"><div class="loading">Cargando...</div></div>
                 </div>
                 <div class="card">
-                    <h2>👥 Sesiones por Terapeuta</h2>
+                    <h2> Sesiones por Terapeuta</h2>
                     <div id="r-ter"><div class="loading">Cargando...</div></div>
                 </div>
             </div>
             <div class="dos-col-igual">
                 <div class="card">
-                    <h2>📅 Atenciones por Mes</h2>
+                    <h2> Atenciones por Mes</h2>
                     <div id="r-mes"><div class="loading">Cargando...</div></div>
                 </div>
                 <div class="card">
-                    <h2>⚠️ Insumos Bajo Stock Mínimo</h2>
+                    <h2> Insumos (Logistica)</h2>
                     <div id="r-stock"><div class="loading">Cargando...</div></div>
-                </div>
+
             </div>
             <div class="dos-col-igual">
                 <div class="card">
-                    <h2>💰 Costo Total por Paciente</h2>
+                    <h2> Costo Total por Paciente</h2>
                     <div id="r-costo"><div class="loading">Cargando...</div></div>
                 </div>
                 <div class="card">
-                    <h2>🔍 Pacientes sin Sesiones</h2>
+                    <h2> Pacientes sin Sesiones</h2>
                     <div id="r-sinsesion"><div class="loading">Cargando...</div></div>
                 </div>
             </div>
@@ -651,7 +651,7 @@
         <!-- INTEGRACIÓN -->
         <div id="integracion" class="section">
             <div class="card">
-                <h2>🔗 Integración con otros Departamentos</h2>
+                <h2> Integración con otros Departamentos</h2>
                 <div style="background:#e6f4ea;padding:15px;border-radius:8px;text-align:center;max-width:200px">
                     <div style="font-size:24px">👤</div>
                     <div style="font-weight:bold;color:#34a853;margin:5px 0">Gestión de Pacientes</div>
@@ -659,7 +659,7 @@
                 </div>
             </div>
             <div class="card">
-                <h2>👤 Pacientes del Hospital <span class="tag-integracion">DEPT. 1</span></h2>
+                <h2> Pacientes del Hospital <span class="tag-integracion">DEPT. 1</span></h2>
                 <p style="font-size:13px;color:#666;margin-bottom:15px">Pacientes registrados en el sistema central del hospital disponibles para asignar terapias</p>
                 <div id="t-gestion-pac"><div class="loading">Conectando con Gestión de Pacientes...</div></div>
             </div>
@@ -1016,8 +1016,13 @@
             const r3 = await get(`${API}/api/Mis/pacientes-por-mes`);
             document.getElementById('r-mes').innerHTML = tabla(r3, [{ key: 'anio', label: 'Año' }, { key: 'mes', label: 'Mes' }, { key: 'totalAtenciones', label: 'Atenciones' }], null);
 
-            const r4 = await get(`${API}/api/Mis/insumos-bajo-stock`);
-            document.getElementById('r-stock').innerHTML = tabla(r4, [{ key: 'nombre', label: 'Insumo' }, { key: 'stockActual', label: 'Stock Actual' }, { key: 'stockMinimo', label: 'Mínimo' }, { key: 'diferencia', label: 'Faltante' }], null);
+            const r4 = await get('https://logisticahospitalariabackend-production.up.railway.app/api/Inventario/stock');
+            document.getElementById('r-stock').innerHTML = tabla(r4, [
+                { key: 'codigoInsumo', label: 'Código' },
+                { key: 'nombreInsumo', label: 'Insumo' },
+                { key: 'nombreAlmacen', label: 'Almacén' },
+                { key: 'stockActual', label: 'Stock Actual' }
+            ], null);
 
             const r5 = await get(`${API}/api/Mis/costo-total-por-paciente`);
             document.getElementById('r-costo').innerHTML = tabla(r5, [{ key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }, { key: 'costoTotal', label: 'Costo Total' }], null);
