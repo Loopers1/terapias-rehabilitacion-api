@@ -496,578 +496,578 @@
                     <div id="d-ter"><div class="loading">Cargando...</div></div>
                 </div>
             </div>
-            <div class="card">
-                <h2> Costo Total por Paciente</h2>
-                <div id="d-costo"><div class="loading">Cargando...</div></div>
-            </div>
+            <!--<div class="card">
+    <h2> Costo Total por Paciente</h2>
+    <div id="d-costo"><div class="loading">Cargando...</div></div>-->
         </div>
-
-        <!-- PACIENTES -->
-        <div id="pacientes" class="section">
-            <div class="dos-col">
-                <div class="card">
-                    <h2>➕ Nuevo Paciente</h2>
-                    <div id="al-pac" class="alerta"></div>
-                    <div class="form-group"><label>Código *</label><input type="text" id="n-pac-cod" placeholder="PAC-005"></div>
-                    <div class="form-group"><label>Nombre *</label><input type="text" id="n-pac-nom" placeholder="Juan"></div>
-                    <div class="form-group"><label>Apellido *</label><input type="text" id="n-pac-ape" placeholder="Pérez"></div>
-                    <div class="form-group"><label>CI *</label><input type="text" id="n-pac-ci" placeholder="1234567"></div>
-                    <div class="form-group"><label>Teléfono</label><input type="text" id="n-pac-tel" placeholder="70000000"></div>
-                    <button class="btn btn-success btn-full" onclick="crearPaciente()"> Registrar Paciente</button>
-                </div>
-                <div class="card">
-                    <h2>👤 Lista de Pacientes</h2>
-                    <div id="t-pac"><div class="loading">Cargando...</div></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TERAPEUTAS -->
-        <div id="terapeutas" class="section">
-            <div class="dos-col">
-                <div class="card">
-                    <h2>➕ Nuevo Terapeuta</h2>
-                    <div id="al-ter" class="alerta"></div>
-                    <div class="form-group"><label>Código *</label><input type="text" id="n-ter-cod" placeholder="TER-003"></div>
-                    <div class="form-group"><label>Nombre *</label><input type="text" id="n-ter-nom" placeholder="Luis"></div>
-                    <div class="form-group"><label>Apellido *</label><input type="text" id="n-ter-ape" placeholder="Mamani"></div>
-                    <button class="btn btn-success btn-full" onclick="crearTerapeuta()"> Registrar Terapeuta</button>
-                </div>
-                <div class="card">
-                    <h2>👨‍⚕️ Lista de Terapeutas</h2>
-                    <div id="t-ter"><div class="loading">Cargando...</div></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TIPOS DE TERAPIA -->
-        <div id="terapias" class="section">
-            <div class="dos-col">
-                <div class="card">
-                    <h2>➕ Nuevo Tipo de Terapia</h2>
-                    <div id="al-tt" class="alerta"></div>
-                    <div class="form-group"><label>Código *</label><input type="text" id="n-tt-cod" placeholder="TTR-004"></div>
-                    <div class="form-group"><label>Nombre *</label><input type="text" id="n-tt-nom" placeholder="Hidroterapia"></div>
-                    <div class="form-group"><label>Descripción</label><textarea id="n-tt-des" rows="3" placeholder="Descripción del tratamiento"></textarea></div>
-                    <div class="form-group"><label>Costo (Bs.) *</label><input type="number" id="n-tt-cos" placeholder="180"></div>
-                    <button class="btn btn-success btn-full" onclick="crearTerapia()"> Registrar Tipo de Terapia</button>
-                </div>
-                <div class="card">
-                    <h2>💊 Lista de Tipos de Terapia</h2>
-                    <div id="t-tt"><div class="loading">Cargando...</div></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SESIONES -->
-        <div id="sesiones" class="section">
-            <div class="dos-col">
-                <div class="card">
-                    <h2>➕ Nueva Sesión</h2>
-                    <div id="al-ses" class="alerta"></div>
-                    <div class="form-group"><label>Código *</label><input type="text" id="n-ses-cod" placeholder="SES-006"></div>
-                    <div class="form-group">
-                        <label>Código Paciente *</label>
-                        <select id="n-ses-pac"></select>
-                    </div>
-                    <div class="form-group">
-                        <label>Código Terapeuta *</label>
-                        <select id="n-ses-ter"></select>
-                    </div>
-                    <div class="form-group">
-                        <label>Tipo de Terapia *</label>
-                        <select id="n-ses-tt"></select>
-                    </div>
-                    <div class="form-group"><label>Fecha y Hora *</label><input type="datetime-local" id="n-ses-fec"></div>
-                    <div class="form-group"><label>Duración (min) *</label><input type="number" id="n-ses-dur" placeholder="45"></div>
-                    <div class="form-group"><label>Observaciones</label><textarea id="n-ses-obs" rows="3" placeholder="Observaciones clínicas"></textarea></div>
-                    <button class="btn btn-success btn-full" onclick="crearSesion()"> Registrar Sesión</button>
-                </div>
-                <div class="card">
-                    <h2>📋 Lista de Sesiones</h2>
-                    <div id="t-ses"><div class="loading">Cargando...</div></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PLANES DE TRATAMIENTO -->
-        <div id="planes" class="section">
-            <div class="dos-col">
-                <div class="card">
-                    <h2>➕ Nuevo Plan de Tratamiento</h2>
-                    <div id="al-plan" class="alerta"></div>
-                    <div class="form-group"><label>Código *</label><input type="text" id="n-plan-cod" placeholder="PLAN-004"></div>
-                    <div class="form-group">
-                        <label>Paciente *</label>
-                        <select id="n-plan-pac"></select>
-                    </div>
-                    <div class="form-group"><label>Objetivo *</label><textarea id="n-plan-obj" rows="3" placeholder="Objetivo del tratamiento"></textarea></div>
-                    <div class="form-group"><label>Fecha Inicio *</label><input type="date" id="n-plan-ini"></div>
-                    <div class="form-group"><label>Fecha Fin Estimada *</label><input type="date" id="n-plan-fin"></div>
-                    <button class="btn btn-success btn-full" onclick="crearPlan()"> Registrar Plan</button>
-                </div>
-                <div class="card">
-                    <h2>📝 Planes de Tratamiento</h2>
-                    <div id="t-plan"><div class="loading">Cargando...</div></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- REPORTES MIS -->
-        <div id="reportes" class="section">
-            <div class="dos-col-igual">
-                <div class="card">
-                    <h2> Sesiones por Tipo de Terapia</h2>
-                    <div id="r-tipo"><div class="loading">Cargando...</div></div>
-                </div>
-                <div class="card">
-                    <h2> Sesiones por Terapeuta</h2>
-                    <div id="r-ter"><div class="loading">Cargando...</div></div>
-                </div>
-            </div>
-            <div class="dos-col-igual">
-                <div class="card">
-                    <h2> Atenciones por Mes</h2>
-                    <div id="r-mes"><div class="loading">Cargando...</div></div>
-                </div>
-                <div class="card">
-                    <h2> Insumos (Logistica)</h2>
-                    <div id="r-stock"><div class="loading">Cargando...</div></div>
-
-            </div>
-            <div class="dos-col-igual">
-                <div class="card">
-                    <h2> Costo Total por Paciente</h2>
-                    <div id="r-costo"><div class="loading">Cargando...</div></div>
-                </div>
-                <div class="card">
-                    <h2> Pacientes sin Sesiones</h2>
-                    <div id="r-sinsesion"><div class="loading">Cargando...</div></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- INTEGRACIÓN -->
-        
-
     </div>
 
-    <script>
-        const API = 'https://api-terapias-qls3.onrender.com';
-        const FARMACIA = 'https://hospital3ernivel-farmacia.onrender.com';
+    <!-- PACIENTES -->
+            <div id="pacientes" class="section">
+                <div class="dos-col">
+                    <div class="card">
+                        <h2>➕ Nuevo Paciente</h2>
+                        <div id="al-pac" class="alerta"></div>
+                        <div class="form-group"><label>Código *</label><input type="text" id="n-pac-cod" placeholder="PAC-005"></div>
+                        <div class="form-group"><label>Nombre *</label><input type="text" id="n-pac-nom" placeholder="Juan"></div>
+                        <div class="form-group"><label>Apellido *</label><input type="text" id="n-pac-ape" placeholder="Pérez"></div>
+                        <div class="form-group"><label>CI *</label><input type="text" id="n-pac-ci" placeholder="1234567"></div>
+                        <div class="form-group"><label>Teléfono</label><input type="text" id="n-pac-tel" placeholder="70000000"></div>
+                        <button class="btn btn-success btn-full" onclick="crearPaciente()"> Registrar Paciente</button>
+                    </div>
+                    <div class="card">
+                        <h2>👤 Lista de Pacientes</h2>
+                        <div id="t-pac"><div class="loading">Cargando...</div></div>
+                    </div>
+                </div>
+            </div>
 
-        // Fecha actual
-        document.getElementById('fecha-actual').textContent = new Date().toLocaleDateString('es-BO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            <!-- TERAPEUTAS -->
+            <div id="terapeutas" class="section">
+                <div class="dos-col">
+                    <div class="card">
+                        <h2>➕ Nuevo Terapeuta</h2>
+                        <div id="al-ter" class="alerta"></div>
+                        <div class="form-group"><label>Código *</label><input type="text" id="n-ter-cod" placeholder="TER-003"></div>
+                        <div class="form-group"><label>Nombre *</label><input type="text" id="n-ter-nom" placeholder="Luis"></div>
+                        <div class="form-group"><label>Apellido *</label><input type="text" id="n-ter-ape" placeholder="Mamani"></div>
+                        <button class="btn btn-success btn-full" onclick="crearTerapeuta()"> Registrar Terapeuta</button>
+                    </div>
+                    <div class="card">
+                        <h2>👨‍⚕️ Lista de Terapeutas</h2>
+                        <div id="t-ter"><div class="loading">Cargando...</div></div>
+                    </div>
+                </div>
+            </div>
 
-        function ir(id, btn) {
-            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            btn.classList.add('active');
-        }
+            <!-- TIPOS DE TERAPIA -->
+            <div id="terapias" class="section">
+                <div class="dos-col">
+                    <div class="card">
+                        <h2>➕ Nuevo Tipo de Terapia</h2>
+                        <div id="al-tt" class="alerta"></div>
+                        <div class="form-group"><label>Código *</label><input type="text" id="n-tt-cod" placeholder="TTR-004"></div>
+                        <div class="form-group"><label>Nombre *</label><input type="text" id="n-tt-nom" placeholder="Hidroterapia"></div>
+                        <div class="form-group"><label>Descripción</label><textarea id="n-tt-des" rows="3" placeholder="Descripción del tratamiento"></textarea></div>
+                        <div class="form-group"><label>Costo (Bs.) *</label><input type="number" id="n-tt-cos" placeholder="180"></div>
+                        <button class="btn btn-success btn-full" onclick="crearTerapia()"> Registrar Tipo de Terapia</button>
+                    </div>
+                    <div class="card">
+                        <h2>💊 Lista de Tipos de Terapia</h2>
+                        <div id="t-tt"><div class="loading">Cargando...</div></div>
+                    </div>
+                </div>
+            </div>
 
-        function cerrarModal(id) { document.getElementById(id).classList.remove('activo'); }
-        function abrirModal(id) { document.getElementById(id).classList.add('activo'); }
+            <!-- SESIONES -->
+            <div id="sesiones" class="section">
+                <div class="dos-col">
+                    <div class="card">
+                        <h2>➕ Nueva Sesión</h2>
+                        <div id="al-ses" class="alerta"></div>
+                        <div class="form-group"><label>Código *</label><input type="text" id="n-ses-cod" placeholder="SES-006"></div>
+                        <div class="form-group">
+                            <label>Código Paciente *</label>
+                            <select id="n-ses-pac"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Código Terapeuta *</label>
+                            <select id="n-ses-ter"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de Terapia *</label>
+                            <select id="n-ses-tt"></select>
+                        </div>
+                        <div class="form-group"><label>Fecha y Hora *</label><input type="datetime-local" id="n-ses-fec"></div>
+                        <div class="form-group"><label>Duración (min) *</label><input type="number" id="n-ses-dur" placeholder="45"></div>
+                        <div class="form-group"><label>Observaciones</label><textarea id="n-ses-obs" rows="3" placeholder="Observaciones clínicas"></textarea></div>
+                        <button class="btn btn-success btn-full" onclick="crearSesion()"> Registrar Sesión</button>
+                    </div>
+                    <div class="card">
+                        <h2>📋 Lista de Sesiones</h2>
+                        <div id="t-ses"><div class="loading">Cargando...</div></div>
+                    </div>
+                </div>
+            </div>
 
-        function mostrarAlerta(id, msg, ok) {
-            const el = document.getElementById(id);
-            el.textContent = msg;
-            el.className = `alerta ${ok ? 'alerta-ok' : 'alerta-error'}`;
-            el.style.display = 'block';
-            setTimeout(() => el.style.display = 'none', 4000);
-        }
+            <!-- PLANES DE TRATAMIENTO -->
+            <div id="planes" class="section">
+                <div class="dos-col">
+                    <div class="card">
+                        <h2>➕ Nuevo Plan de Tratamiento</h2>
+                        <div id="al-plan" class="alerta"></div>
+                        <div class="form-group"><label>Código *</label><input type="text" id="n-plan-cod" placeholder="PLAN-004"></div>
+                        <div class="form-group">
+                            <label>Paciente *</label>
+                            <select id="n-plan-pac"></select>
+                        </div>
+                        <div class="form-group"><label>Objetivo *</label><textarea id="n-plan-obj" rows="3" placeholder="Objetivo del tratamiento"></textarea></div>
+                        <div class="form-group"><label>Fecha Inicio *</label><input type="date" id="n-plan-ini"></div>
+                        <div class="form-group"><label>Fecha Fin Estimada *</label><input type="date" id="n-plan-fin"></div>
+                        <button class="btn btn-success btn-full" onclick="crearPlan()"> Registrar Plan</button>
+                    </div>
+                    <div class="card">
+                        <h2>📝 Planes de Tratamiento</h2>
+                        <div id="t-plan"><div class="loading">Cargando...</div></div>
+                    </div>
+                </div>
+            </div>
 
-        function tabla(datos, cols, acciones) {
-            if (!datos || datos.length === 0) return '<div class="sin-datos">No hay datos disponibles</div>';
-            let h = '<table><thead><tr>';
-            cols.forEach(c => h += `<th>${c.label}</th>`);
-            if (acciones) h += '<th>Acciones</th>';
-            h += '</tr></thead><tbody>';
-            datos.forEach(f => {
-                h += '<tr>';
-                cols.forEach(c => {
-                    let v = f[c.key];
-                    if (c.key === 'estado') v = `<span class="badge badge-${(v || '').toLowerCase()}">${v}</span>`;
-                    if (c.key === 'fechaHora' || c.key === 'fecha') v = v ? new Date(v).toLocaleDateString('es-BO') : '-';
-                    if (c.key === 'costo' || c.key === 'costoTotal') v = v ? `Bs. ${parseFloat(v).toFixed(2)}` : '-';
-                    h += `<td>${v ?? '-'}</td>`;
-                });
-                if (acciones) h += `<td>${acciones(f)}</td>`;
-                h += '</tr>';
-            });
-            return h + '</tbody></table>';
-        }
+            <!-- REPORTES MIS -->
+            <div id="reportes" class="section">
+                <div class="dos-col-igual">
+                    <div class="card">
+                        <h2> Sesiones por Tipo de Terapia</h2>
+                        <div id="r-tipo"><div class="loading">Cargando...</div></div>
+                    </div>
+                    <div class="card">
+                        <h2> Sesiones por Terapeuta</h2>
+                        <div id="r-ter"><div class="loading">Cargando...</div></div>
+                    </div>
+                </div>
+                <div class="dos-col-igual">
+                    <div class="card">
+                        <h2> Atenciones por Mes</h2>
+                        <div id="r-mes"><div class="loading">Cargando...</div></div>
+                    </div>
+                    <div class="card">
+                        <h2> Insumos (Logistica)</h2>
+                        <div id="r-stock"><div class="loading">Cargando...</div></div>
 
-        async function get(url) {
-            try {
-                const r = await fetch(url);
-                console.log("Status:", r.status, "URL:", url);
+                    </div>
+                    <div class="dos-col-igual">
+                        <div class="card">
+                            <h2> Costo Total por Paciente</h2>
+                            <div id="r-costo"><div class="loading">Cargando...</div></div>
+                        </div>
+                        <div class="card">
+                            <h2> Pacientes sin Sesiones</h2>
+                            <div id="r-sinsesion"><div class="loading">Cargando...</div></div>
+                        </div>
+                    </div>
+                </div>
 
-                if (!r.ok) throw new Error(`HTTP ${r.status}`);
-
-                const data = await r.json();
-                console.log("DATA:", data);
-
-                return data;
-            } catch (error) {
-                console.error("ERROR FETCH:", url, error);
-                return null;
-            }
-        }
-
-        async function post(url, datos) {
-            try {
-                const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) });
-                return r.ok;
-            } catch { return false; }
-        }
-
-        async function put(url, datos) {
-            try {
-                const r = await fetch(url, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) });
-                return r.ok;
-            } catch { return false; }
-        }
-
-        async function del(url) {
-            try {
-                const r = await fetch(url, { method: 'DELETE' });
-                return r.ok;
-            } catch { return false; }
-        }
-
-        // ===================== PACIENTES =====================
-        async function cargarPacientes() {
-            const d = await get(`${API}/api/Paciente`);
-            document.getElementById('t-pac').innerHTML = tabla(d,
-                [{ key: 'codigo', label: 'Código' }, { key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'ci', label: 'CI' }, { key: 'telefono', label: 'Teléfono' }],
-                f => `<button class="btn btn-warning btn-sm" onclick="editarPaciente('${f.codigo}','${f.nombre}','${f.apellido}','${f.ci}','${f.telefono}')">✏️</button>
-                <button class="btn btn-danger btn-sm" onclick="eliminarPaciente('${f.codigo}')">🗑️</button>`
-            );
-        }
-
-        async function crearPaciente() {
-            const ok = await post(`${API}/api/Paciente`, {
-                codigo: document.getElementById('n-pac-cod').value,
-                nombre: document.getElementById('n-pac-nom').value,
-                apellido: document.getElementById('n-pac-ape').value,
-                ci: document.getElementById('n-pac-ci').value,
-                telefono: document.getElementById('n-pac-tel').value
-            });
-            mostrarAlerta('al-pac', ok ? '✅ Paciente registrado correctamente' : '❌ Error al registrar', ok);
-            if (ok) { cargarPacientes(); cargarSelectores(); }
-        }
-
-        function editarPaciente(cod, nom, ape, ci, tel) {
-            document.getElementById('edit-pac-codigo-original').value = cod;
-            document.getElementById('edit-pac-codigo').value = cod;
-            document.getElementById('edit-pac-nombre').value = nom;
-            document.getElementById('edit-pac-apellido').value = ape;
-            document.getElementById('edit-pac-ci').value = ci;
-            document.getElementById('edit-pac-telefono').value = tel;
-            abrirModal('modal-paciente');
-        }
-
-        async function guardarPaciente() {
-            const cod = document.getElementById('edit-pac-codigo-original').value;
-            const ok = await put(`${API}/api/Paciente/${cod}`, {
-                codigo: cod,
-                nombre: document.getElementById('edit-pac-nombre').value,
-                apellido: document.getElementById('edit-pac-apellido').value,
-                ci: document.getElementById('edit-pac-ci').value,
-                telefono: document.getElementById('edit-pac-telefono').value
-            });
-            if (ok) { cerrarModal('modal-paciente'); cargarPacientes(); }
-            else alert('Error al guardar cambios');
-        }
-
-        async function eliminarPaciente(cod) {
-            if (!confirm(`¿Desactivar al paciente ${cod}?`)) return;
-            const ok = await del(`${API}/api/Paciente/${cod}`);
-            if (ok) cargarPacientes();
-            else alert('Error al eliminar');
-        }
-
-        // ===================== TERAPEUTAS =====================
-        async function cargarTerapeutas() {
-            const d = await get(`${API}/api/Terapeuta`);
-            document.getElementById('t-ter').innerHTML = tabla(d,
-                [{ key: 'codigo', label: 'Código' }, { key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }],
-                f => `<button class="btn btn-warning btn-sm" onclick="editarTerapeuta('${f.codigo}','${f.nombre}','${f.apellido}')">✏️</button>
-                <button class="btn btn-danger btn-sm" onclick="eliminarTerapeuta('${f.codigo}')">🗑️</button>`
-            );
-        }
-
-        async function crearTerapeuta() {
-            const ok = await post(`${API}/api/Terapeuta`, {
-                codigo: document.getElementById('n-ter-cod').value,
-                nombre: document.getElementById('n-ter-nom').value,
-                apellido: document.getElementById('n-ter-ape').value
-            });
-            mostrarAlerta('al-ter', ok ? '✅ Terapeuta registrado' : '❌ Error al registrar', ok);
-            if (ok) { cargarTerapeutas(); cargarSelectores(); }
-        }
-
-        function editarTerapeuta(cod, nom, ape) {
-            document.getElementById('edit-ter-codigo-original').value = cod;
-            document.getElementById('edit-ter-codigo').value = cod;
-            document.getElementById('edit-ter-nombre').value = nom;
-            document.getElementById('edit-ter-apellido').value = ape;
-            abrirModal('modal-terapeuta');
-        }
-
-        async function guardarTerapeuta() {
-            const cod = document.getElementById('edit-ter-codigo-original').value;
-            const ok = await put(`${API}/api/Terapeuta/${cod}`, {
-                codigo: cod,
-                nombre: document.getElementById('edit-ter-nombre').value,
-                apellido: document.getElementById('edit-ter-apellido').value
-            });
-            if (ok) { cerrarModal('modal-terapeuta'); cargarTerapeutas(); }
-            else alert('Error al guardar');
-        }
-
-        async function eliminarTerapeuta(cod) {
-            if (!confirm(`¿Desactivar al terapeuta ${cod}?`)) return;
-            const ok = await del(`${API}/api/Terapeuta/${cod}`);
-            if (ok) cargarTerapeutas();
-            else alert('Error al eliminar');
-        }
-
-        // ===================== TIPOS DE TERAPIA =====================
-        async function cargarTerapias() {
-            const d = await get(`${API}/api/TipoTerapia`);
-            document.getElementById('t-tt').innerHTML = tabla(d,
-                [{ key: 'codigo', label: 'Código' }, { key: 'nombre', label: 'Nombre' }, { key: 'descripcion', label: 'Descripción' }, { key: 'costo', label: 'Costo' }],
-                f => `<button class="btn btn-warning btn-sm" onclick="editarTerapia('${f.codigo}','${f.nombre}','${f.descripcion}',${f.costo})">✏️</button>
-                <button class="btn btn-danger btn-sm" onclick="eliminarTerapia('${f.codigo}')">🗑️</button>`
-            );
-        }
-
-        async function crearTerapia() {
-            const ok = await post(`${API}/api/TipoTerapia`, {
-                codigo: document.getElementById('n-tt-cod').value,
-                nombre: document.getElementById('n-tt-nom').value,
-                descripcion: document.getElementById('n-tt-des').value,
-                costo: parseFloat(document.getElementById('n-tt-cos').value)
-            });
-            mostrarAlerta('al-tt', ok ? '✅ Tipo de terapia registrado' : '❌ Error al registrar', ok);
-            if (ok) { cargarTerapias(); cargarSelectores(); }
-        }
-
-        function editarTerapia(cod, nom, des, cos) {
-            document.getElementById('edit-tt-codigo-original').value = cod;
-            document.getElementById('edit-tt-codigo').value = cod;
-            document.getElementById('edit-tt-nombre').value = nom;
-            document.getElementById('edit-tt-descripcion').value = des;
-            document.getElementById('edit-tt-costo').value = cos;
-            abrirModal('modal-terapia');
-        }
-
-        async function guardarTerapia() {
-            const cod = document.getElementById('edit-tt-codigo-original').value;
-            const ok = await put(`${API}/api/TipoTerapia/${cod}`, {
-                codigo: cod,
-                nombre: document.getElementById('edit-tt-nombre').value,
-                descripcion: document.getElementById('edit-tt-descripcion').value,
-                costo: parseFloat(document.getElementById('edit-tt-costo').value)
-            });
-            if (ok) { cerrarModal('modal-terapia'); cargarTerapias(); }
-            else alert('Error al guardar');
-        }
-
-        async function eliminarTerapia(cod) {
-            if (!confirm(`¿Desactivar el tipo de terapia ${cod}?`)) return;
-            const ok = await del(`${API}/api/TipoTerapia/${cod}`);
-            if (ok) cargarTerapias();
-            else alert('Error al eliminar');
-        }
-
-        // ===================== SESIONES =====================
-        async function cargarSesiones() {
-            const d = await get(`${API}/api/Sesion/detalle-completo`);
-            document.getElementById('t-ses').innerHTML = tabla(d,
-                [{ key: 'codigo', label: 'Código' }, { key: 'paciente', label: 'Paciente' }, { key: 'tipoTerapia', label: 'Terapia' }, { key: 'fechaHora', label: 'Fecha' }, { key: 'duracionMinutos', label: 'Min' }, { key: 'observaciones', label: 'Observaciones' }],
-                f => `<button class="btn btn-danger btn-sm" onclick="eliminarSesion('${f.codigo}')">🗑️</button>`
-            );
-        }
-
-        async function crearSesion() {
-            const ok = await post(`${API}/api/Sesion`, {
-                codigo: document.getElementById('n-ses-cod').value,
-                codigoPaciente: document.getElementById('n-ses-pac').value,
-                codigoTerapeuta: document.getElementById('n-ses-ter').value,
-                codigoTipoTerapia: document.getElementById('n-ses-tt').value,
-                fechaHora: document.getElementById('n-ses-fec').value,
-                duracionMinutos: parseInt(document.getElementById('n-ses-dur').value),
-                observaciones: document.getElementById('n-ses-obs').value
-            });
-            mostrarAlerta('al-ses', ok ? '✅ Sesión registrada correctamente' : '❌ Error al registrar sesión', ok);
-            if (ok) cargarSesiones();
-        }
-
-        async function eliminarSesion(cod) {
-            if (!confirm(`¿Desactivar la sesión ${cod}?`)) return;
-            const ok = await del(`${API}/api/Sesion/${cod}`);
-            if (ok) cargarSesiones();
-            else alert('Error al eliminar');
-        }
-
-        // ===================== PLANES =====================
-        async function cargarPlanes() {
-            const d = await get(`${API}/api/Mis/plan-tratamiento/todos`);
-            document.getElementById('t-plan').innerHTML = tabla(d || [],
-                [
-                    { key: 'codigo', label: 'Código' },
-                    { key: 'nombre', label: 'Paciente' },
-                    { key: 'objetivo', label: 'Objetivo' },
-                    { key: 'fechaInicio', label: 'Inicio' },
-                    { key: 'fechaFinEstimada', label: 'Fin Estimado' }
-                ],
-                f => `<button class="btn btn-warning btn-sm" onclick="editarPlan('${f.codigo}','${f.objetivo}','${f.fechaInicio}','${f.fechaFinEstimada}')">✏️</button>
-                  <button class="btn btn-danger btn-sm" onclick="eliminarPlan('${f.codigo}')">🗑️</button>`
-            );
-        }
-
-        async function crearPlan() {
-            const datos = {
-                codigo: document.getElementById('n-plan-cod').value,
-                codigoPaciente: document.getElementById('n-plan-pac').value,
-                objetivo: document.getElementById('n-plan-obj').value,
-                fechaInicio: document.getElementById('n-plan-ini').value + 'T00:00:00',
-                fechaFinEstimada: document.getElementById('n-plan-fin').value + 'T00:00:00'
-            };
-            const ok = await post(`${API}/api/Mis/plan-tratamiento/crear`, datos);
-            mostrarAlerta('al-plan', ok ? '✅ Plan registrado correctamente' : '❌ Error al registrar plan', ok);
-            if (ok) cargarPlanes();
-        }
-
-        async function editarPlan(cod, obj, ini, fin) {
-            document.getElementById('edit-plan-codigo').value = cod;
-            document.getElementById('edit-plan-objetivo').value = obj;
-            document.getElementById('edit-plan-inicio').value = ini?.split('T')[0] ?? '';
-            document.getElementById('edit-plan-fin').value = fin?.split('T')[0] ?? '';
-            abrirModal('modal-plan');
-        }
-
-        async function guardarPlan() {
-            const cod = document.getElementById('edit-plan-codigo').value;
-            const ok = await put(`${API}/api/Mis/plan-tratamiento/editar/${cod}`, {
-                codigo: cod,
-                codigoPaciente: '',
-                objetivo: document.getElementById('edit-plan-objetivo').value,
-                fechaInicio: document.getElementById('edit-plan-inicio').value + 'T00:00:00',
-                fechaFinEstimada: document.getElementById('edit-plan-fin').value + 'T00:00:00'
-            });
-            if (ok) { cerrarModal('modal-plan'); cargarPlanes(); }
-            else alert('Error al guardar cambios');
-        }
-
-        async function eliminarPlan(cod) {
-            if (!confirm(`¿Desactivar el plan ${cod}?`)) return;
-            const ok = await del(`${API}/api/Mis/plan-tratamiento/eliminar/${cod}`);
-            if (ok) cargarPlanes();
-            else alert('Error al eliminar');
-        }
-
-        // ===================== SELECTORES =====================
-        async function cargarSelectores() {
-            const pacs = await get(`${API}/api/Paciente`);
-            const ters = await get(`${API}/api/Terapeuta`);
-            const tts = await get(`${API}/api/TipoTerapia`);
-
-            const selPacSes = document.getElementById('n-ses-pac');
-            const selPacPlan = document.getElementById('n-plan-pac');
-            const selTer = document.getElementById('n-ses-ter');
-            const selTT = document.getElementById('n-ses-tt');
-
-            if (pacs) {
-                const opts = pacs.map(p => `<option value="${p.codigo}">${p.codigo} — ${p.nombre} ${p.apellido}</option>`).join('');
-                selPacSes.innerHTML = opts;
-                selPacPlan.innerHTML = opts;
-            }
-            if (ters) selTer.innerHTML = ters.map(t => `<option value="${t.codigo}">${t.codigo} — ${t.nombre} ${t.apellido}</option>`).join('');
-            if (tts) selTT.innerHTML = tts.map(t => `<option value="${t.codigo}">${t.codigo} — ${t.nombre}</option>`).join('');
-        }
-
-        // ===================== REPORTES =====================
-        async function cargarReportes() {
-            const r1 = await get(`${API}/api/Mis/sesiones-por-tipo-terapia`);
-            document.getElementById('r-tipo').innerHTML = tabla(r1, [{ key: 'nombre', label: 'Tipo de Terapia' }, { key: 'totalSesiones', label: 'Total Sesiones' }], null);
-
-            const r2 = await get(`${API}/api/Mis/sesiones-por-terapeuta`);
-            document.getElementById('r-ter').innerHTML = tabla(r2, [{ key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }], null);
-
-            const r3 = await get(`${API}/api/Mis/pacientes-por-mes`);
-            document.getElementById('r-mes').innerHTML = tabla(r3, [{ key: 'anio', label: 'Año' }, { key: 'mes', label: 'Mes' }, { key: 'totalAtenciones', label: 'Atenciones' }], null);
-
-            const r4 = await get('https://logisticahospitalariabackend-production.up.railway.app/api/Inventario/stock');
-            document.getElementById('r-stock').innerHTML = tabla(r4, [
-                { key: 'codigoInsumo', label: 'Código' },
-                { key: 'nombreInsumo', label: 'Insumo' },
-                { key: 'nombreAlmacen', label: 'Almacén' },
-                { key: 'stockActual', label: 'Stock Actual' }
-            ], null);
-
-            const r5 = await get(`${API}/api/Mis/costo-total-por-paciente`);
-            document.getElementById('r-costo').innerHTML = tabla(r5, [{ key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }, { key: 'costoTotal', label: 'Costo Total' }], null);
-
-            const r6 = await get(`${API}/api/Mis/pacientes-sin-sesiones`);
-            document.getElementById('r-sinsesion').innerHTML = tabla(r6, [{ key: 'codigo', label: 'Código' }, { key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'telefono', label: 'Teléfono' }], null);
-        }
-
-        // ===================== DASHBOARD =====================
-        async function cargarDashboard() {
-            const p = await get(`${API}/api/Paciente`);
-            const s = await get(`${API}/api/Sesion/detalle-completo`);
-            const t = await get(`${API}/api/Terapeuta`);
-            const tt = await get(`${API}/api/TipoTerapia`);
-            document.getElementById('s-pac').textContent = p?.length ?? 0;
-            document.getElementById('s-ses').textContent = s?.length ?? 0;
-            document.getElementById('s-ter').textContent = t?.length ?? 0;
-            document.getElementById('s-tt').textContent = tt?.length ?? 0;
-
-            const dt = await get(`${API}/api/Mis/sesiones-por-tipo-terapia`);
-            document.getElementById('d-tipo').innerHTML = tabla(dt, [{ key: 'nombre', label: 'Tipo' }, { key: 'totalSesiones', label: 'Sesiones' }], null);
-
-            const dter = await get(`${API}/api/Mis/sesiones-por-terapeuta`);
-            document.getElementById('d-ter').innerHTML = tabla(dter, [{ key: 'nombre', label: 'Terapeuta' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }], null);
-
-            const dc = await get(`${API}/api/Mis/costo-total-por-paciente`);
-            document.getElementById('d-costo').innerHTML = tabla(dc, [{ key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }, { key: 'costoTotal', label: 'Costo Total (Bs.)' }], null);
-        }
-
-        // ===================== INTEGRACIÓN =====================
-        async function cargarIntegracion() {
-            const pacExt = await get('https://gestionpacientes.onrender.com/api/pacientes/');
-            if (pacExt && pacExt.length > 0) {
-                document.getElementById('estado-gestion-pac').textContent = '✅ Conectado';
-                document.getElementById('t-gestion-pac').innerHTML = tabla(pacExt, [
-                    { key: 'codigo_paciente', label: 'Código' },
-                    { key: 'nombre', label: 'Nombre' },
-                    { key: 'apellido', label: 'Apellido' },
-                    { key: 'ci', label: 'CI' },
-                    { key: 'telefono', label: 'Teléfono' },
-                    { key: 'sexo', label: 'Sexo' },
-                    { key: 'direccion', label: 'Dirección' }
-                ], null);
-            } else {
-                document.getElementById('estado-gestion-pac').textContent = '❌ Sin conexión';
-                document.getElementById('t-gestion-pac').innerHTML = '<div class="error-conexion">No se pudo conectar con Gestión de Pacientes</div>';
-            }
-        }
+                <!-- INTEGRACIÓN -->
 
 
-        // INICIO
-        cargarDashboard();
-        cargarPacientes();
-        cargarTerapeutas();
-        cargarTerapias();
-        cargarSesiones();
-        cargarPlanes();
-        cargarReportes();
-        //cargarIntegracion();
-        cargarSelectores();
-    </script>
+            </div>
+
+            <script>
+                const API = 'https://api-terapias-qls3.onrender.com';
+                const FARMACIA = 'https://hospital3ernivel-farmacia.onrender.com';
+
+                // Fecha actual
+                document.getElementById('fecha-actual').textContent = new Date().toLocaleDateString('es-BO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+                function ir(id, btn) {
+                    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                    document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+                    document.getElementById(id).classList.add('active');
+                    btn.classList.add('active');
+                }
+
+                function cerrarModal(id) { document.getElementById(id).classList.remove('activo'); }
+                function abrirModal(id) { document.getElementById(id).classList.add('activo'); }
+
+                function mostrarAlerta(id, msg, ok) {
+                    const el = document.getElementById(id);
+                    el.textContent = msg;
+                    el.className = `alerta ${ok ? 'alerta-ok' : 'alerta-error'}`;
+                    el.style.display = 'block';
+                    setTimeout(() => el.style.display = 'none', 4000);
+                }
+
+                function tabla(datos, cols, acciones) {
+                    if (!datos || datos.length === 0) return '<div class="sin-datos">No hay datos disponibles</div>';
+                    let h = '<table><thead><tr>';
+                    cols.forEach(c => h += `<th>${c.label}</th>`);
+                    if (acciones) h += '<th>Acciones</th>';
+                    h += '</tr></thead><tbody>';
+                    datos.forEach(f => {
+                        h += '<tr>';
+                        cols.forEach(c => {
+                            let v = f[c.key];
+                            if (c.key === 'estado') v = `<span class="badge badge-${(v || '').toLowerCase()}">${v}</span>`;
+                            if (c.key === 'fechaHora' || c.key === 'fecha') v = v ? new Date(v).toLocaleDateString('es-BO') : '-';
+                            if (c.key === 'costo' || c.key === 'costoTotal') v = v ? `Bs. ${parseFloat(v).toFixed(2)}` : '-';
+                            h += `<td>${v ?? '-'}</td>`;
+                        });
+                        if (acciones) h += `<td>${acciones(f)}</td>`;
+                        h += '</tr>';
+                    });
+                    return h + '</tbody></table>';
+                }
+
+                async function get(url) {
+                    try {
+                        const r = await fetch(url);
+                        console.log("Status:", r.status, "URL:", url);
+
+                        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+
+                        const data = await r.json();
+                        console.log("DATA:", data);
+
+                        return data;
+                    } catch (error) {
+                        console.error("ERROR FETCH:", url, error);
+                        return null;
+                    }
+                }
+
+                async function post(url, datos) {
+                    try {
+                        const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) });
+                        return r.ok;
+                    } catch { return false; }
+                }
+
+                async function put(url, datos) {
+                    try {
+                        const r = await fetch(url, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) });
+                        return r.ok;
+                    } catch { return false; }
+                }
+
+                async function del(url) {
+                    try {
+                        const r = await fetch(url, { method: 'DELETE' });
+                        return r.ok;
+                    } catch { return false; }
+                }
+
+                // ===================== PACIENTES =====================
+                async function cargarPacientes() {
+                    const d = await get(`${API}/api/Paciente`);
+                    document.getElementById('t-pac').innerHTML = tabla(d,
+                        [{ key: 'codigo', label: 'Código' }, { key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'ci', label: 'CI' }, { key: 'telefono', label: 'Teléfono' }],
+                        f => `<button class="btn btn-warning btn-sm" onclick="editarPaciente('${f.codigo}','${f.nombre}','${f.apellido}','${f.ci}','${f.telefono}')">✏️</button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarPaciente('${f.codigo}')">🗑️</button>`
+                    );
+                }
+
+                async function crearPaciente() {
+                    const ok = await post(`${API}/api/Paciente`, {
+                        codigo: document.getElementById('n-pac-cod').value,
+                        nombre: document.getElementById('n-pac-nom').value,
+                        apellido: document.getElementById('n-pac-ape').value,
+                        ci: document.getElementById('n-pac-ci').value,
+                        telefono: document.getElementById('n-pac-tel').value
+                    });
+                    mostrarAlerta('al-pac', ok ? '✅ Paciente registrado correctamente' : '❌ Error al registrar', ok);
+                    if (ok) { cargarPacientes(); cargarSelectores(); }
+                }
+
+                function editarPaciente(cod, nom, ape, ci, tel) {
+                    document.getElementById('edit-pac-codigo-original').value = cod;
+                    document.getElementById('edit-pac-codigo').value = cod;
+                    document.getElementById('edit-pac-nombre').value = nom;
+                    document.getElementById('edit-pac-apellido').value = ape;
+                    document.getElementById('edit-pac-ci').value = ci;
+                    document.getElementById('edit-pac-telefono').value = tel;
+                    abrirModal('modal-paciente');
+                }
+
+                async function guardarPaciente() {
+                    const cod = document.getElementById('edit-pac-codigo-original').value;
+                    const ok = await put(`${API}/api/Paciente/${cod}`, {
+                        codigo: cod,
+                        nombre: document.getElementById('edit-pac-nombre').value,
+                        apellido: document.getElementById('edit-pac-apellido').value,
+                        ci: document.getElementById('edit-pac-ci').value,
+                        telefono: document.getElementById('edit-pac-telefono').value
+                    });
+                    if (ok) { cerrarModal('modal-paciente'); cargarPacientes(); }
+                    else alert('Error al guardar cambios');
+                }
+
+                async function eliminarPaciente(cod) {
+                    if (!confirm(`¿Desactivar al paciente ${cod}?`)) return;
+                    const ok = await del(`${API}/api/Paciente/${cod}`);
+                    if (ok) cargarPacientes();
+                    else alert('Error al eliminar');
+                }
+
+                // ===================== TERAPEUTAS =====================
+                async function cargarTerapeutas() {
+                    const d = await get(`${API}/api/Terapeuta`);
+                    document.getElementById('t-ter').innerHTML = tabla(d,
+                        [{ key: 'codigo', label: 'Código' }, { key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }],
+                        f => `<button class="btn btn-warning btn-sm" onclick="editarTerapeuta('${f.codigo}','${f.nombre}','${f.apellido}')">✏️</button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarTerapeuta('${f.codigo}')">🗑️</button>`
+                    );
+                }
+
+                async function crearTerapeuta() {
+                    const ok = await post(`${API}/api/Terapeuta`, {
+                        codigo: document.getElementById('n-ter-cod').value,
+                        nombre: document.getElementById('n-ter-nom').value,
+                        apellido: document.getElementById('n-ter-ape').value
+                    });
+                    mostrarAlerta('al-ter', ok ? '✅ Terapeuta registrado' : '❌ Error al registrar', ok);
+                    if (ok) { cargarTerapeutas(); cargarSelectores(); }
+                }
+
+                function editarTerapeuta(cod, nom, ape) {
+                    document.getElementById('edit-ter-codigo-original').value = cod;
+                    document.getElementById('edit-ter-codigo').value = cod;
+                    document.getElementById('edit-ter-nombre').value = nom;
+                    document.getElementById('edit-ter-apellido').value = ape;
+                    abrirModal('modal-terapeuta');
+                }
+
+                async function guardarTerapeuta() {
+                    const cod = document.getElementById('edit-ter-codigo-original').value;
+                    const ok = await put(`${API}/api/Terapeuta/${cod}`, {
+                        codigo: cod,
+                        nombre: document.getElementById('edit-ter-nombre').value,
+                        apellido: document.getElementById('edit-ter-apellido').value
+                    });
+                    if (ok) { cerrarModal('modal-terapeuta'); cargarTerapeutas(); }
+                    else alert('Error al guardar');
+                }
+
+                async function eliminarTerapeuta(cod) {
+                    if (!confirm(`¿Desactivar al terapeuta ${cod}?`)) return;
+                    const ok = await del(`${API}/api/Terapeuta/${cod}`);
+                    if (ok) cargarTerapeutas();
+                    else alert('Error al eliminar');
+                }
+
+                // ===================== TIPOS DE TERAPIA =====================
+                async function cargarTerapias() {
+                    const d = await get(`${API}/api/TipoTerapia`);
+                    document.getElementById('t-tt').innerHTML = tabla(d,
+                        [{ key: 'codigo', label: 'Código' }, { key: 'nombre', label: 'Nombre' }, { key: 'descripcion', label: 'Descripción' }, { key: 'costo', label: 'Costo' }],
+                        f => `<button class="btn btn-warning btn-sm" onclick="editarTerapia('${f.codigo}','${f.nombre}','${f.descripcion}',${f.costo})">✏️</button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarTerapia('${f.codigo}')">🗑️</button>`
+                    );
+                }
+
+                async function crearTerapia() {
+                    const ok = await post(`${API}/api/TipoTerapia`, {
+                        codigo: document.getElementById('n-tt-cod').value,
+                        nombre: document.getElementById('n-tt-nom').value,
+                        descripcion: document.getElementById('n-tt-des').value,
+                        costo: parseFloat(document.getElementById('n-tt-cos').value)
+                    });
+                    mostrarAlerta('al-tt', ok ? '✅ Tipo de terapia registrado' : '❌ Error al registrar', ok);
+                    if (ok) { cargarTerapias(); cargarSelectores(); }
+                }
+
+                function editarTerapia(cod, nom, des, cos) {
+                    document.getElementById('edit-tt-codigo-original').value = cod;
+                    document.getElementById('edit-tt-codigo').value = cod;
+                    document.getElementById('edit-tt-nombre').value = nom;
+                    document.getElementById('edit-tt-descripcion').value = des;
+                    document.getElementById('edit-tt-costo').value = cos;
+                    abrirModal('modal-terapia');
+                }
+
+                async function guardarTerapia() {
+                    const cod = document.getElementById('edit-tt-codigo-original').value;
+                    const ok = await put(`${API}/api/TipoTerapia/${cod}`, {
+                        codigo: cod,
+                        nombre: document.getElementById('edit-tt-nombre').value,
+                        descripcion: document.getElementById('edit-tt-descripcion').value,
+                        costo: parseFloat(document.getElementById('edit-tt-costo').value)
+                    });
+                    if (ok) { cerrarModal('modal-terapia'); cargarTerapias(); }
+                    else alert('Error al guardar');
+                }
+
+                async function eliminarTerapia(cod) {
+                    if (!confirm(`¿Desactivar el tipo de terapia ${cod}?`)) return;
+                    const ok = await del(`${API}/api/TipoTerapia/${cod}`);
+                    if (ok) cargarTerapias();
+                    else alert('Error al eliminar');
+                }
+
+                // ===================== SESIONES =====================
+                async function cargarSesiones() {
+                    const d = await get(`${API}/api/Sesion/detalle-completo`);
+                    document.getElementById('t-ses').innerHTML = tabla(d,
+                        [{ key: 'codigo', label: 'Código' }, { key: 'paciente', label: 'Paciente' }, { key: 'tipoTerapia', label: 'Terapia' }, { key: 'fechaHora', label: 'Fecha' }, { key: 'duracionMinutos', label: 'Min' }, { key: 'observaciones', label: 'Observaciones' }],
+                        f => `<button class="btn btn-danger btn-sm" onclick="eliminarSesion('${f.codigo}')">🗑️</button>`
+                    );
+                }
+
+                async function crearSesion() {
+                    const ok = await post(`${API}/api/Sesion`, {
+                        codigo: document.getElementById('n-ses-cod').value,
+                        codigoPaciente: document.getElementById('n-ses-pac').value,
+                        codigoTerapeuta: document.getElementById('n-ses-ter').value,
+                        codigoTipoTerapia: document.getElementById('n-ses-tt').value,
+                        fechaHora: document.getElementById('n-ses-fec').value,
+                        duracionMinutos: parseInt(document.getElementById('n-ses-dur').value),
+                        observaciones: document.getElementById('n-ses-obs').value
+                    });
+                    mostrarAlerta('al-ses', ok ? '✅ Sesión registrada correctamente' : '❌ Error al registrar sesión', ok);
+                    if (ok) cargarSesiones();
+                }
+
+                async function eliminarSesion(cod) {
+                    if (!confirm(`¿Desactivar la sesión ${cod}?`)) return;
+                    const ok = await del(`${API}/api/Sesion/${cod}`);
+                    if (ok) cargarSesiones();
+                    else alert('Error al eliminar');
+                }
+
+                // ===================== PLANES =====================
+                async function cargarPlanes() {
+                    const d = await get(`${API}/api/Mis/plan-tratamiento/todos`);
+                    document.getElementById('t-plan').innerHTML = tabla(d || [],
+                        [
+                            { key: 'codigo', label: 'Código' },
+                            { key: 'nombre', label: 'Paciente' },
+                            { key: 'objetivo', label: 'Objetivo' },
+                            { key: 'fechaInicio', label: 'Inicio' },
+                            { key: 'fechaFinEstimada', label: 'Fin Estimado' }
+                        ],
+                        f => `<button class="btn btn-warning btn-sm" onclick="editarPlan('${f.codigo}','${f.objetivo}','${f.fechaInicio}','${f.fechaFinEstimada}')">✏️</button>
+                              <button class="btn btn-danger btn-sm" onclick="eliminarPlan('${f.codigo}')">🗑️</button>`
+                    );
+                }
+
+                async function crearPlan() {
+                    const datos = {
+                        codigo: document.getElementById('n-plan-cod').value,
+                        codigoPaciente: document.getElementById('n-plan-pac').value,
+                        objetivo: document.getElementById('n-plan-obj').value,
+                        fechaInicio: document.getElementById('n-plan-ini').value + 'T00:00:00',
+                        fechaFinEstimada: document.getElementById('n-plan-fin').value + 'T00:00:00'
+                    };
+                    const ok = await post(`${API}/api/Mis/plan-tratamiento/crear`, datos);
+                    mostrarAlerta('al-plan', ok ? '✅ Plan registrado correctamente' : '❌ Error al registrar plan', ok);
+                    if (ok) cargarPlanes();
+                }
+
+                async function editarPlan(cod, obj, ini, fin) {
+                    document.getElementById('edit-plan-codigo').value = cod;
+                    document.getElementById('edit-plan-objetivo').value = obj;
+                    document.getElementById('edit-plan-inicio').value = ini?.split('T')[0] ?? '';
+                    document.getElementById('edit-plan-fin').value = fin?.split('T')[0] ?? '';
+                    abrirModal('modal-plan');
+                }
+
+                async function guardarPlan() {
+                    const cod = document.getElementById('edit-plan-codigo').value;
+                    const ok = await put(`${API}/api/Mis/plan-tratamiento/editar/${cod}`, {
+                        codigo: cod,
+                        codigoPaciente: '',
+                        objetivo: document.getElementById('edit-plan-objetivo').value,
+                        fechaInicio: document.getElementById('edit-plan-inicio').value + 'T00:00:00',
+                        fechaFinEstimada: document.getElementById('edit-plan-fin').value + 'T00:00:00'
+                    });
+                    if (ok) { cerrarModal('modal-plan'); cargarPlanes(); }
+                    else alert('Error al guardar cambios');
+                }
+
+                async function eliminarPlan(cod) {
+                    if (!confirm(`¿Desactivar el plan ${cod}?`)) return;
+                    const ok = await del(`${API}/api/Mis/plan-tratamiento/eliminar/${cod}`);
+                    if (ok) cargarPlanes();
+                    else alert('Error al eliminar');
+                }
+
+                // ===================== SELECTORES =====================
+                async function cargarSelectores() {
+                    const pacs = await get(`${API}/api/Paciente`);
+                    const ters = await get(`${API}/api/Terapeuta`);
+                    const tts = await get(`${API}/api/TipoTerapia`);
+
+                    const selPacSes = document.getElementById('n-ses-pac');
+                    const selPacPlan = document.getElementById('n-plan-pac');
+                    const selTer = document.getElementById('n-ses-ter');
+                    const selTT = document.getElementById('n-ses-tt');
+
+                    if (pacs) {
+                        const opts = pacs.map(p => `<option value="${p.codigo}">${p.codigo} — ${p.nombre} ${p.apellido}</option>`).join('');
+                        selPacSes.innerHTML = opts;
+                        selPacPlan.innerHTML = opts;
+                    }
+                    if (ters) selTer.innerHTML = ters.map(t => `<option value="${t.codigo}">${t.codigo} — ${t.nombre} ${t.apellido}</option>`).join('');
+                    if (tts) selTT.innerHTML = tts.map(t => `<option value="${t.codigo}">${t.codigo} — ${t.nombre}</option>`).join('');
+                }
+
+                // ===================== REPORTES =====================
+                async function cargarReportes() {
+                    const r1 = await get(`${API}/api/Mis/sesiones-por-tipo-terapia`);
+                    document.getElementById('r-tipo').innerHTML = tabla(r1, [{ key: 'nombre', label: 'Tipo de Terapia' }, { key: 'totalSesiones', label: 'Total Sesiones' }], null);
+
+                    const r2 = await get(`${API}/api/Mis/sesiones-por-terapeuta`);
+                    document.getElementById('r-ter').innerHTML = tabla(r2, [{ key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }], null);
+
+                    const r3 = await get(`${API}/api/Mis/pacientes-por-mes`);
+                    document.getElementById('r-mes').innerHTML = tabla(r3, [{ key: 'anio', label: 'Año' }, { key: 'mes', label: 'Mes' }, { key: 'totalAtenciones', label: 'Atenciones' }], null);
+
+                    const r4 = await get('https://logisticahospitalariabackend-production.up.railway.app/api/Inventario/stock');
+                    document.getElementById('r-stock').innerHTML = tabla(r4, [
+                        { key: 'codigoInsumo', label: 'Código' },
+                        { key: 'nombreInsumo', label: 'Insumo' },
+                        { key: 'nombreAlmacen', label: 'Almacén' },
+                        { key: 'stockActual', label: 'Stock Actual' }
+                    ], null);
+
+                    const r5 = await get(`${API}/api/Mis/costo-total-por-paciente`);
+                    document.getElementById('r-costo').innerHTML = tabla(r5, [{ key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }, { key: 'costoTotal', label: 'Costo Total' }], null);
+
+                    const r6 = await get(`${API}/api/Mis/pacientes-sin-sesiones`);
+                    document.getElementById('r-sinsesion').innerHTML = tabla(r6, [{ key: 'codigo', label: 'Código' }, { key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'telefono', label: 'Teléfono' }], null);
+                }
+
+                // ===================== DASHBOARD =====================
+                async function cargarDashboard() {
+                    const p = await get(`${API}/api/Paciente`);
+                    const s = await get(`${API}/api/Sesion/detalle-completo`);
+                    const t = await get(`${API}/api/Terapeuta`);
+                    const tt = await get(`${API}/api/TipoTerapia`);
+                    document.getElementById('s-pac').textContent = p?.length ?? 0;
+                    document.getElementById('s-ses').textContent = s?.length ?? 0;
+                    document.getElementById('s-ter').textContent = t?.length ?? 0;
+                    document.getElementById('s-tt').textContent = tt?.length ?? 0;
+
+                    const dt = await get(`${API}/api/Mis/sesiones-por-tipo-terapia`);
+                    document.getElementById('d-tipo').innerHTML = tabla(dt, [{ key: 'nombre', label: 'Tipo' }, { key: 'totalSesiones', label: 'Sesiones' }], null);
+
+                    const dter = await get(`${API}/api/Mis/sesiones-por-terapeuta`);
+                    document.getElementById('d-ter').innerHTML = tabla(dter, [{ key: 'nombre', label: 'Terapeuta' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }], null);
+
+                    const dc = await get(`${API}/api/Mis/costo-total-por-paciente`);
+                    document.getElementById('d-costo').innerHTML = tabla(dc, [{ key: 'nombre', label: 'Nombre' }, { key: 'apellido', label: 'Apellido' }, { key: 'totalSesiones', label: 'Sesiones' }, { key: 'costoTotal', label: 'Costo Total (Bs.)' }], null);
+                }
+
+                // ===================== INTEGRACIÓN =====================
+                async function cargarIntegracion() {
+                    const pacExt = await get('https://gestionpacientes.onrender.com/api/pacientes/');
+                    if (pacExt && pacExt.length > 0) {
+                        document.getElementById('estado-gestion-pac').textContent = '✅ Conectado';
+                        document.getElementById('t-gestion-pac').innerHTML = tabla(pacExt, [
+                            { key: 'codigo_paciente', label: 'Código' },
+                            { key: 'nombre', label: 'Nombre' },
+                            { key: 'apellido', label: 'Apellido' },
+                            { key: 'ci', label: 'CI' },
+                            { key: 'telefono', label: 'Teléfono' },
+                            { key: 'sexo', label: 'Sexo' },
+                            { key: 'direccion', label: 'Dirección' }
+                        ], null);
+                    } else {
+                        document.getElementById('estado-gestion-pac').textContent = '❌ Sin conexión';
+                        document.getElementById('t-gestion-pac').innerHTML = '<div class="error-conexion">No se pudo conectar con Gestión de Pacientes</div>';
+                    }
+                }
+
+
+                // INICIO
+                cargarDashboard();
+                cargarPacientes();
+                cargarTerapeutas();
+                cargarTerapias();
+                cargarSesiones();
+                cargarPlanes();
+                cargarReportes();
+                //cargarIntegracion();
+                cargarSelectores();
+            </script>
 </body>
 </html>
